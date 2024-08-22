@@ -87,5 +87,5 @@ export default defineConfig({
   },
   lastUpdated:true,
   outDir: "docs",
-  base: "/docs"
+  base: "/blog"
 })
