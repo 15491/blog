@@ -26,5 +26,5 @@ export default defineConfig({
     ]
   },
   outDir: "docs",
-  base: "/blog/"
+  base: "/docs/"
 })
