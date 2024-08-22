@@ -3,23 +3,26 @@
 layout: home
 
 hero:
-  name: "blog"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "Blog"
+  text: C一下V一下
+  tagline: 一个人能否有成就，只看他是否具备C与V这两个条件
+  image:
+    src: /img/logo.jpg
+    alt: VitePress
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 看看进阶
+      link: /md/progressive/test
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 看看八股文
+      link: /md/classical/test
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 菜
+    icon: 🫵
+  - title: 就
+    icon: 🫵
+  - title: 多练
+    icon: 🫵
 ---
 
