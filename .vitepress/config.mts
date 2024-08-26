@@ -57,10 +57,13 @@ export default defineConfig({
       ],
       '/md/classical/': [
         {
-          text: '八股文',
+          text: 'HTML-CSS',
           items: [
-            { text: 'One', link: '/guide/one' },
-            { text: 'Two', link: '/guide/two' }
+            { text: 'SEO', link: '/md/classical/html-css/seo' },
+            { text: 'defer&async', link: '/md/classical/html-css/script' },
+            { text: 'css3', link: '/md/classical/html-css/css3' },
+            { text: 'DPR-PPI-DPI', link: '/md/classical/html-css/DPR-PPI-DPI' },
+            { text: 'mobile', link: '/md/classical/html-css/mobile' },
           ]
         }
       ],
