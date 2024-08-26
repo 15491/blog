@@ -9,7 +9,7 @@
 
 **选择器**
 
-* 新的选择器 如 `[atrr^=value]`(属性已特定的字符串开始)
+* 新的选择器 如 `[attr^=value]`(属性已特定的字符串开始)
 * 结构性伪类，如`:nth-child`、`:nth-last-child`、`:first-of-type`
 
 **边框和边框**
