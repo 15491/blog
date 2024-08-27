@@ -13,6 +13,10 @@ export default defineConfig({
       { text: '八股文', link: '/md/classical' },
     ],
 
+    outline: {
+      label: '文章目录',
+    },
+
     sidebar: {
       '/md/basics/': [
         {
@@ -65,7 +69,17 @@ export default defineConfig({
             { text: 'DPR-PPI-DPI', link: '/md/classical/html-css/DPR-PPI-DPI' },
             { text: 'mobile', link: '/md/classical/html-css/mobile' },
           ]
-        }
+        },
+        {
+          text: '浏览器渲染',
+          items: [
+            { text: 'DNS解析', link: '/md/classical/browser/DNS-TCP' },
+            { text: '浏览器内核', link: '/md/classical/browser/browser-core' },
+            { text: '浏览器渲染', link: '/md/classical/browser/browser-render' },
+            { text: '重绘回流', link: '/md/classical/browser/backflow-redraw' },
+            { text: '一些问题', link: '/md/classical/browser/issue' },
+          ]
+        },
       ],
     },
 
