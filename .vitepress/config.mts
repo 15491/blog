@@ -80,6 +80,16 @@ export default defineConfig({
             { text: '一些问题', link: '/md/classical/browser/issue' },
           ]
         },
+        {
+          text: 'CORS 跨域',
+          items: [
+            { text: 'CORS', link: '/md/classical/cors/cors' },
+            { text: 'Nginx跨域访问 跨域', link: '/md/classical/cors/Nginx跨域访问' },
+            { text: 'server 解决', link: '/md/classical/cors/server' },
+            { text: '开发模式解决', link: '/md/classical/cors/vite-webpack' },
+            { text: '问题', link: '/md/classical/cors/issue' },
+          ]
+        }
       ],
     },
 
