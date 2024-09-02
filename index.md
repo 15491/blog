@@ -19,10 +19,13 @@ hero:
 
 features:
   - title: 菜
-    icon: 🫵
+    icon: 
+      src: /public/img/hand.svg
   - title: 就
-    icon: 🫵
+    icon: 
+      src: /public/img/hand.svg
   - title: 多练
-    icon: 🫵
+    icon: 
+      src: /public/img/hand.svg
 ---
 
