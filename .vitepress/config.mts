@@ -28,7 +28,11 @@ export default defineConfig({
         {
           text: 'Node',
           items: [
-            { text: 'One', link: '/md/basics/node/one' }
+            { text: 'fs模块', link: '/md/basics/node/fs模块' },
+            { text: 'events模块', link: '/md/basics/node/events模块' },
+            { text: '数据的二进制', link: '/md/basics/node/数据的二进制' },
+            { text: '流', link: '/md/basics/node/服务器开发、文件上传' },
+            { text: 'http模块', link: '/md/basics/node/http模块' },
           ],
         }
       ],
