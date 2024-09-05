@@ -195,7 +195,64 @@ console.log(queryObj.password)
 * end：这种方式是写出最后的数据，并且写出后会关闭流
 
 ```javascript
+res.write("hello")
+res.write("hi")
+res.end("end")
 ```
+
+**如果我们没有调用end和close，客户端将会一直等待结果**
+
+* 所以客户端在发送网络请求的时候，都会设置超时时间
+
+## 返回状态码
+
+**Http状态码是用来表示Http相应状态的数字代码**
+
+* Http状态码非常多，可以根据不同的情况，给客户端返回不同的状态码
+
+| 常见Http状态码 | 状态描述              | 信息说明                                             |
+| -------------- | --------------------- | ---------------------------------------------------- |
+| 200            | OK                    | 客户端请求成功                                       |
+| 201            | Created               | POST请求，创建新的资源                               |
+| 301            | Moved Permanently     | 请求资源的URL已修改，相应中会给出新的URL             |
+| 400            | Bad Request           | 客户端错误，服务器无法或者不进行处理                 |
+| 401            | Unauthorized          | 未授权的错误，必须携带请求的身份信息                 |
+| 403            | Forbidden             | 客户端没有权限访问，被拒绝                           |
+| 500            | Internal Server Error | 服务器遇到了不知道如何处理的情况                     |
+| 503            | Service Unavailable   | 服务器不可用，可能处理维护或者重载状态，暂时无法访问 |
+
+```javascript
+res.statusCode = 400
+res.writeHead(200)
+```
+
+## 响应头文件
+
+**返回头信息，主要有两种方式**
+
+* res.setHeader:一次写入一个头部信息
+* res.writeHeader:同时写入header和status
+
+```javascript
+res.setHeader("Content-Type", "application/json;charset=utf8")
+
+res.writeHead(200, {
+    "Content-Type": "application/json;charset=utf8"
+})
+```
+
+**Header设置Content-Type有什么作用**
+
+* 默认客户端接收到的是字符串，客户端会按照自己默认的方式进行处理
+
+## **http请求**
+
+**axios可以在浏览器中使用，也可以在node中使用**
+
+* 在浏览器中，axios是封装的xhr
+* 在node中，axios封装的是http内置模块
+
+## 文件上传
 
 
 
