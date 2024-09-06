@@ -254,6 +254,39 @@ res.writeHead(200, {
 
 ## 文件上传
 
+```javascript
+const http = require('http')
+
+const fs = require('fs')
+
+const server = http.createServer((req, res) => {
+
+  // 转为二进制
+  req.setEncoding('binary')
+
+  const writeStream = fs.createWriteStream('./jojo.jpg', {
+    flags: "a+"
+  })
+
+  req.on('data', (data) => {
+    console.log(data)
+    writeStream.write(data)
+  })
+
+  req.on('end', () => {
+    console.log("上传成功")
+
+    writeStream.close()
+
+    res.end('上传成功')
+  })
+})
+
+server.listen(3000, () => {
+  console.log("启动")
+})
+```
+
 
 
 
