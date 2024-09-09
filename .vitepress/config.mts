@@ -33,6 +33,7 @@ export default defineConfig({
             { text: '数据的二进制', link: '/md/basics/node/数据的二进制' },
             { text: '流', link: '/md/basics/node/服务器开发、文件上传' },
             { text: 'http模块', link: '/md/basics/node/http模块' },
+            { text: 'express', link: '/md/basics/node/express' },
           ],
         }
       ],

@@ -223,10 +223,62 @@ app.use("/login", (req, res) => {
 })
 ```
 
+**响应数据**
 
+* end方法
+  * 类似http中的response.end方法，用法一致
+* json方法
+  * json方法中可以传入很多的类型：object,array,string,boolean,number,null等，他们会被转为json格式返回
+* status方法
+  * 用于设置状态码
+  * 注意：这是一个函数，不是一个属性值
 
 ## express路由
 
+**如果我们将所有的代码逻辑都写在app中，那么app会变得越来越复杂**
+
+* 一方面完整的web服务器包含很多的逻辑处理
+* 另一方面有些逻辑其实是一个整体，我们应该将他们放在一起，比如对于user的处理
+  * 获取用户列表
+  * 获取某一个用户信息
+  * 创建一个新的用户
+  * 删除一个用户
+  * 更新一个用户
+
+**我们可以使用express.Router来创建一个路由处理程序**
+
+* 一个Router实例拥有完整的中间件和路由系统
+* 因此，他也被称为迷你应用程序(mini-app)
+
+**静态资源处理**
+
+部署静态资源我们可以选择很多方式
+
+* node也可以作为静态资源服务器，并且express给我们提供了方便部署静态资源的方法
+
+```javascript
+const express = require("express")
+
+const app = express()
+
+app.use(express.static("./build"))
+
+app.listen(3000, () => {
+    console.log("启动")
+})
+```
+
 ## express错误处理
 
-## express源码解析
+```javascript
+app.use((err, req, res, next) => {
+    const message = err.message
+    
+    switch(message) {
+        case "USER DOES NOT EXISTS":
+            res.status(400).json({message})
+    }
+    
+    res.status(500)
+})
+```
