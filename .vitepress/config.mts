@@ -35,6 +35,16 @@ export default defineConfig({
             { text: 'http模块', link: '/md/basics/node/http模块' },
             { text: 'express', link: '/md/basics/node/express' },
           ],
+        },
+        {
+          text: "MySQL",
+          items: [
+            { text: '常见数据库', link: '/md/basics/mysql/常见数据库' },
+            { text: '操作', link: '/md/basics/mysql/操作' },
+            { text: '数据类型', link: '/md/basics/mysql/数据类型' },
+            { text: '表约束', link: '/md/basics/mysql/表约束' },
+            { text: '表操作', link: '/md/basics/mysql/表操作' },
+          ]
         }
       ],
       '/md/progressive/': [
