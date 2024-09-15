@@ -7,7 +7,7 @@
 * 当应用程序需要某一个资源时，可以向一台服务器，通过http请求获取到这个资源
 * 提供资源的这个服务器，就是一个web服务器
 
-## htpp模块
+## http模块
 
 在node提供，提供web服务器的资源返回给浏览器，主要是通过http模块
 
@@ -94,8 +94,8 @@ const server = new Server((req, res) => {
 
 **客户端在发送请求时，会请求不同的数据，那么会传入不同的请求地址**
 
-* 比如 http://localhost:8000/login
-* 比如http://localhost:8000/products
+* 比如 `http://localhost:8000/login`
+* 比如 `http://localhost:8000/products`
 
 **服务器需要根据不同的请求地址，做出不同的相应**
 
@@ -116,7 +116,7 @@ const server = new Server((req, res) => {
 
 **那么用户的请求还携带参数**
 
-* http://localhost:8000/login?name=why&password=123
+* `http://localhost:8000/login?name=why&password=123`
 
 **如何解析，使用内置模块url**
 
@@ -146,7 +146,7 @@ console.log(queryObj.password)
 * patch 更新数据
 * delete 删除数据
 
-## HTTP Rquest Header
+## HTTP Request Header
 
 **在request对象的header中也包含很多信息**
 
