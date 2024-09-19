@@ -44,6 +44,7 @@ export default defineConfig({
             { text: '数据类型', link: '/md/basics/mysql/数据类型' },
             { text: '表约束', link: '/md/basics/mysql/表约束' },
             { text: '表操作', link: '/md/basics/mysql/表操作' },
+            { text: '多表查询', link: '/md/basics/mysql/多表查询' },
           ]
         }
       ],
